@@ -19,9 +19,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="methode1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Premiere Methode</a>
-    <a href="methode2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Deuxieme Methode</a>
-    <a href="resultats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Résultats</a>
+    <a href="methode1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">First Method</a>
+    <a href="methode2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Second Method</a>
+    <a href="resultats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Results</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -40,11 +40,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Méthode 1 : Optical flow and superpixel</h1>
+      <h1>Method 1 : Optical flow and superpixel</h1>
       <h5 class="w3-padding-32"></h5>
 
-            <p class="w3-text-grey">In this page we will explain my algorithm that combines the result of a SLIC Superpixel algorithm
-              and a Optical Flow
+            <p class="w3-text-grey">In this page i will explain the algorithm that combines the result of the SLIC Superpixel algorithm
+              and theOptical Flow
 	  
 	  
 	  
@@ -56,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       We use the SLIC method. Basically, SLIC compute centers of the superpixels, affect close pixels to this superpixel and update the centers. This operations is repeated until there is a Convergence.</p>
       
        <p class="w3-text-grey">
-      The Superpixels are use to determine the boundaries of the objects
+      The Superpixels are used to determine the boundaries of the objects
       </p>
 
 		<figure>
@@ -68,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
      
 	  <p class="w3-text-grey">
 	  
-	  The second operation to do is a optical flow between two frames. Because we need all the pixels to be associated with an optical flow
+	  The second operation is to do the optical flow between two frames. Because we need all the pixels to be associated with an optical flow,
       we compute a Dense Optical Flow using the Farneback algorithm. </p>
       
        <p class="w3-text-grey">
@@ -80,8 +80,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		</figure>
       
       <p class="w3-text-grey">
-      when there is camera movements, the optical flow could be biaised and detect background as moving object. So this a a pre process after the optical flow
-        concisting on removing the optical flows (magnitude and angle) close to the median flow in the image. 
+      When there is camera movements, the optical flow could be biaised and detect background as moving object. So this we do a process after the optical flow
+        which consist on removing the optical flows (magnitude and angle) close to the median flow in the image. 
       </p>
       
       <figure>
@@ -90,7 +90,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		</figure>
       <p class="w3-text-grey">
      Finally, we have to use the boundaries provided by the Superpixels and the moving object provided by the optical flow . 
-        The algorithm is simple. For every superpixels, if there is a certain purcent (70%) of not null flow, the superpixel is set as object and added to our result. 
+        The algorithm is simple. For every superpixels, if there is a certain percent (70%) of not null flow, the superpixel is set as object and added to our result. 
       </p>
       
       <figure>
