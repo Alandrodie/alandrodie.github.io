@@ -19,17 +19,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="methode1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Premiere Methode</a>
-    <a href="methode2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Deuxieme Methode</a>
-    <a href="resultats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Résultats</a>
+    <a href="methode1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">First Method</a>
+    <a href="methode2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Second Method</a>
+    <a href="resultats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Results</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="methode1.html" class="w3-bar-item w3-button w3-padding-large">First Method</a>
+    <a href="methode2.html" class="w3-bar-item w3-button w3-padding-large">Second Method</a>
+    <a href="resultats.html" class="w3-bar-item w3-button w3-padding-large">Results</a>
   </div>
 </div>
 
@@ -40,7 +40,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-full-height">
-      <h1>Méthode 2 : implementation of the article  “Fast and Automatic Video Object Segmentation and Tracking for Content-Based Applications” by Changick Kim and Jenq-Neng Hwang
+      <h1>Method 2 : implementation of the article  “Fast and Automatic Video Object Segmentation and Tracking for Content-Based Applications” by Changick Kim and Jenq-Neng Hwang
 </h1>
       <h5 class="w3-padding-32"></h5>
 
@@ -80,7 +80,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<figcaption>Exemple de candidats horizontaux </figcaption>
 		</figure>
 			<p class="w3-text-grey"> In the created method , we didn't suceed at doing the vertical candidates , and because of this
-			we couldn't continue further , but i will explain fastly what was supossed to happen next : <br>
+			we couldn't continue further , but i will explain fastly what was supposed to happen next : <br>
 			We needed to Combine both candidates with an AND logical operator , and then extract the VOPs thanks to 
 			morphological operations. After this we simply do a connected component analysis on the extracted VOPs and then
 			compute the smoothness of motion trajectory (smoothness of direction and speed) finally an algorithm will decide 
