@@ -45,7 +45,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h5 class="w3-padding-32"></h5>
 
             <p class="w3-text-grey">In this page i will explain the algorithm that combines the result of the SLIC Superpixel algorithm
-              and theOptical Flow
+              and the Optical Flow
 	  
 	  
 	  
@@ -54,7 +54,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	  <p class="w3-text-grey">
 	  
 	  The first thing to do is to compute the Superpixels. The superpixels consist in segmenting the image into regions of equivalent size.
-      We use the SLIC method. Basically, SLIC compute centers of the superpixels, affect close pixels to this superpixel and update the centers. This operations is repeated until there is a Convergence.</p>
+      We use the SLIC method. Basically, SLIC compute centers of the superpixels, affect pixels that has become closer to the centers to this superpixel and update the centers. This operations is repeated until there is a Convergence.</p>
       
        <p class="w3-text-grey">
       The Superpixels are used to determine the boundaries of the objects
@@ -81,7 +81,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		</figure>
       
       <p class="w3-text-grey">
-      When there is camera movements, the optical flow could be biaised and detect background as moving object. So this we do a process after the optical flow
+      When there is camera movements, the optical flow could be biaised and detect background as moving object. So  we do a process after the optical flow
         which consist on removing the optical flows (magnitude and angle) close to the median flow in the image. 
       </p>
       
@@ -90,7 +90,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 			<figcaption>Optical flow after removing moving background </figcaption>
 		</figure>
       <p class="w3-text-grey">
-     Finally, we have to use the boundaries provided by the Superpixels and the moving object provided by the optical flow . 
+     Finally, we have to match the boundaries provided by the Superpixels and the moving object provided by the optical flow . 
         The algorithm is simple. For every superpixels, if there is a certain percent (70%) of not null flow, the superpixel is set as object and added to our result. 
       </p>
       
